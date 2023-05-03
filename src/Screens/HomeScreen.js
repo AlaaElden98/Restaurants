@@ -35,6 +35,7 @@ const HomeScreen = ({navigation}) => {
   const getResturantsData = async searchText => {
     const data = await getResturants(searchText || 'san jose');
     const SectionData = prepareSectionData(data);
+    setRestaurants([]);
     setRestaurants(SectionData);
   };
 
